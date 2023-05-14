@@ -1,7 +1,11 @@
 ---
 title: Hexo&Github搭建个人博客
 date: 2023-05-12 20:46:38
-tags: Blog
+tags: 
+- Hexo
+- Github
+categories: 
+- Blog
 ---
 
 # Hexo&Github搭建个人博客
@@ -123,7 +127,6 @@ deploy:
 
 ```
 npm install hexo-deployer-git --save
-
 ```
 
 ![1680875583179](C:\Users\PLacebo\AppData\Roaming\Typora\typora-user-images\1680875583179.png)
@@ -137,13 +140,11 @@ npm install hexo-deployer-git --save
 ```
 hexo clean
 或者hexo cl
-
 ```
 
 ```
 hexo generate
 或者hexo g
-
 ```
 
 ![1680876225334](C:\Users\PLacebo\AppData\Roaming\Typora\typora-user-images\1680876225334.png)
@@ -155,7 +156,6 @@ hexo generate
 ```
 hexo deploy
 或者hexo d
-
 ```
 
 如果发生如下报错：![1680876607176](C:\Users\PLacebo\AppData\Roaming\Typora\typora-user-images\1680876607176.png)
@@ -178,7 +178,6 @@ hexo deploy
 [user]
 	email=你的邮箱
 	name=GitHub用户名
-
 ```
 
 若又出现以下错误，无法访问错误， 不要惊慌，多次尝试，或者更换网络再次尝试（加速器）：![1680877644122](C:\Users\PLacebo\AppData\Roaming\Typora\typora-user-images\1680877644122.png)

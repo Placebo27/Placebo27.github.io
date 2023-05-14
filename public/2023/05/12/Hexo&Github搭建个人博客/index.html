@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/pills_180x180.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/pills_32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/pills_16x16.png">
+  <link rel="mask-icon" href="/images/pills.svg" color="#222">
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -44,9 +44,10 @@
 <meta property="og:image" content="c:/Users/PLacebo/AppData/Roaming/Typora/typora-user-images/1680878256004.png">
 <meta property="og:image" content="c:/Users/PLacebo/AppData/Roaming/Typora/typora-user-images/1680878360529.png">
 <meta property="article:published_time" content="2023-05-12T12:46:38.000Z">
-<meta property="article:modified_time" content="2023-05-12T12:52:51.708Z">
+<meta property="article:modified_time" content="2023-05-14T11:57:07.758Z">
 <meta property="article:author" content="Placebo">
-<meta property="article:tag" content="Blog">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Github">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="c:/Users/PLacebo/AppData/Roaming/Typora/typora-user-images/1680873666633.png">
 
@@ -81,6 +82,9 @@
       <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
@@ -91,6 +95,7 @@
       <p class="site-title">Placebo’s Blog</p>
       <i class="logo-line"></i>
     </a>
+      <p class="site-subtitle" itemprop="description">HAVE A NICE DAY</p>
   </div>
 
   <div class="site-nav-right">
@@ -101,6 +106,10 @@
 
 
 
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-首页"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-标签"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-分类"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-归档"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-友人帐"><a href="/link/" rel="section"><i class="fas fa-link fa-fw"></i>友人帐</a></li><li class="menu-item menu-item-关于我"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于我</a></li>
+  </ul>
+</nav>
 
 
 
@@ -140,9 +149,15 @@
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
-      <div class="site-state-item site-state-tags">
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
         <span class="site-state-item-count">1</span>
-        <span class="site-state-item-name">标签</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
@@ -196,9 +211,24 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2023-05-12 20:46:38 / 修改时间：20:52:51" itemprop="dateCreated datePublished" datetime="2023-05-12T20:46:38+08:00">2023-05-12</time>
+      <time title="创建时间：2023-05-12 20:46:38" itemprop="dateCreated datePublished" datetime="2023-05-12T20:46:38+08:00">2023-05-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-05-14 19:57:07" itemprop="dateModified" datetime="2023-05-14T19:57:07+08:00">2023-05-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a>
+        </span>
     </span>
 
   
@@ -257,18 +287,18 @@
 <h4 id="Git修改deploy配置项"><a href="#Git修改deploy配置项" class="headerlink" title="Git修改deploy配置项"></a>Git修改deploy配置项</h4><p>打开<code>Blog/_config.yml</code>，修改底部deploy配置项：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: 你的github仓库地址</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
 
-<h3 id="hexo-deployer-git自动部署发布工具安装"><a href="#hexo-deployer-git自动部署发布工具安装" class="headerlink" title="hexo-deployer-git自动部署发布工具安装"></a>hexo-deployer-git自动部署发布工具安装</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="hexo-deployer-git自动部署发布工具安装"><a href="#hexo-deployer-git自动部署发布工具安装" class="headerlink" title="hexo-deployer-git自动部署发布工具安装"></a>hexo-deployer-git自动部署发布工具安装</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 
 <p><img src="C:\Users\PLacebo\AppData\Roaming\Typora\typora-user-images\1680875583179.png" alt="1680875583179"></p>
 <h3 id="生成public上传文件夹"><a href="#生成public上传文件夹" class="headerlink" title="生成public上传文件夹"></a>生成public上传文件夹</h3><p>进入到<code>Blog</code>博客根目录下，右键选择<code>Git Bash Here</code>：</p>
 <p>如果不是首次上传则先清除本地的缓存（首次上传清不清除无所谓）：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">或者hexo cl</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">或者hexo cl</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">或者hexo g</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">或者hexo g</span><br></pre></td></tr></table></figure>
 
 <p><img src="C:\Users\PLacebo\AppData\Roaming\Typora\typora-user-images\1680876225334.png" alt="1680876225334"></p>
 <h3 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h3><p>将生成的public文件夹部署到github上，把本地hexo博客内容提交到github仓库：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br><span class="line">或者hexo d</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br><span class="line">或者hexo d</span><br></pre></td></tr></table></figure>
 
 <p>如果发生如下报错：<img src="C:\Users\PLacebo\AppData\Roaming\Typora\typora-user-images\1680876607176.png" alt="1680876607176"></p>
 <p>出现该问题不要惊慌，这个错误其实很简单，是因为同步文件缺失导致的，很明显我们push的hexo静态文件会缺失README.md这个文件，所以我们只需要把远端的README.md文件同步下来或者新建一个readme.md文档即可。</p>
@@ -278,7 +308,7 @@
 <p> 1.在文件浏览器中勾选显示隐藏的项目 </p>
 <p> 2.进入我们博客目录的<code>.deploy_git.git</code>子目录，找到config文件。 </p>
 <p> 3.打开config文件，添加以下内容 ：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[user]</span><br><span class="line">	email=你的邮箱</span><br><span class="line">	name=GitHub用户名</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[user]</span><br><span class="line">	email=你的邮箱</span><br><span class="line">	name=GitHub用户名</span><br></pre></td></tr></table></figure>
 
 <p>若又出现以下错误，无法访问错误， 不要惊慌，多次尝试，或者更换网络再次尝试（加速器）：<img src="C:\Users\PLacebo\AppData\Roaming\Typora\typora-user-images\1680877644122.png" alt="1680877644122"></p>
 <p>然后会弹出一个小窗口，登陆你的github账户进行连接，链接成功你会收到一封邮件。</p>
@@ -297,18 +327,19 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Blog/" rel="tag"># Blog</a>
+              <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+              <a href="/tags/Github/" rel="tag"># Github</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/04/07/hello-world/" rel="prev" title="Hello World">
-                  <i class="fa fa-chevron-left"></i> Hello World
-                </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2023/05/12/hello-world/" rel="next" title="Hello World">
+                  Hello World <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
     </footer>

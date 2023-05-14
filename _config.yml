@@ -4,12 +4,12 @@
 
 # Site
 title: Placebo’s Blog
-subtitle: ''
+subtitle: 'HAVE A NICE DAY'
 description: 'Placebo的个人博客，记载学习生活记录'
 keywords:
 author: Placebo
 language: zh-CN
-timezone: ''
+timezone: Asia/Shanghai
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
