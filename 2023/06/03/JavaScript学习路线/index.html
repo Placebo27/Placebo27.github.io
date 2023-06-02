@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/pills_180x180.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/pills_32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/pills_16x16.png">
+  <link rel="mask-icon" href="/images/pills.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="JavaScript学习路线学习JavaScript的路线可以分为以下几个阶段。在学习过程中，你可以多做实践项目，加深对知识点的理解。 基础知识学习JavaScript需要掌握以下基础内容：  基本语法和数据类型：JavaScript是一种弱类型脚本语言，需要掌握变量、运算符、控制流语句等基本语法，以及基本的数据类型（数字、字符串、布尔、数组、对象等）。 学习HTML和CSS的基本知识，它们是与J">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript学习路线">
+<meta property="og:url" content="http://example.com/2023/06/03/JavaScript%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/index.html">
+<meta property="og:site_name" content="Placebo’s Blog">
+<meta property="og:description" content="JavaScript学习路线学习JavaScript的路线可以分为以下几个阶段。在学习过程中，你可以多做实践项目，加深对知识点的理解。 基础知识学习JavaScript需要掌握以下基础内容：  基本语法和数据类型：JavaScript是一种弱类型脚本语言，需要掌握变量、运算符、控制流语句等基本语法，以及基本的数据类型（数字、字符串、布尔、数组、对象等）。 学习HTML和CSS的基本知识，它们是与J">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-06-02T16:04:22.000Z">
+<meta property="article:modified_time" content="2023-06-02T16:05:30.811Z">
+<meta property="article:author" content="Placebo">
+<meta property="article:tag" content="JavaScript">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2023/06/03/JavaScript%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2023/06/03/JavaScript%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/","path":"2023/06/03/JavaScript学习路线/","title":"JavaScript学习路线"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>JavaScript学习路线 | Placebo’s Blog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Placebo’s Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">HAVE A NICE DAY</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">5</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">4</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">5</span></a></li><li class="menu-item menu-item-link"><a href="/link/" rel="section"><i class="fas fa-link fa-fw"></i>友人帐</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于我</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF"><span class="nav-number">1.</span> <span class="nav-text">JavaScript学习路线</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-number">1.1.</span> <span class="nav-text">基础知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86"><span class="nav-number">1.2.</span> <span class="nav-text">进阶知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A1%86%E6%9E%B6%E5%92%8C%E5%BA%93"><span class="nav-number">1.3.</span> <span class="nav-text">框架和库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5%E5%92%8C%E5%B7%A5%E5%85%B7"><span class="nav-number">1.4.</span> <span class="nav-text">工程实践和工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%81%E7%BB%AD%E5%AD%A6%E4%B9%A0"><span class="nav-number">1.5.</span> <span class="nav-text">持续学习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%82%E5%90%88%E5%88%9D%E5%AD%A6%E8%80%85%E7%9A%84JavaScript%E7%BB%83%E6%89%8B%E9%A1%B9%E7%9B%AE"><span class="nav-number">1.6.</span> <span class="nav-text">适合初学者的JavaScript练手项目</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Placebo</p>
+  <div class="site-description" itemprop="description">Placebo的个人博客，记载学习生活记录</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/03/JavaScript%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Placebo">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Placebo’s Blog">
+      <meta itemprop="description" content="Placebo的个人博客，记载学习生活记录">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="JavaScript学习路线 | Placebo’s Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          JavaScript学习路线
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-06-03 00:04:22 / 修改时间：00:05:30" itemprop="dateCreated datePublished" datetime="2023-06-03T00:04:22+08:00">2023-06-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%8D%E7%AB%AF/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="JavaScript学习路线"><a href="#JavaScript学习路线" class="headerlink" title="JavaScript学习路线"></a>JavaScript学习路线</h1><p>学习JavaScript的路线可以分为以下几个阶段。在学习过程中，你可以多做实践项目，加深对知识点的理解。</p>
+<h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><p>学习JavaScript需要掌握以下基础内容：</p>
+<ol>
+<li>基本语法和数据类型：JavaScript是一种弱类型脚本语言，需要掌握变量、运算符、控制流语句等基本语法，以及基本的数据类型（数字、字符串、布尔、数组、对象等）。</li>
+<li>学习HTML和CSS的基本知识，它们是与JavaScript一起构建网页的关键技术。</li>
+<li>DOM操作：DOM是文档对象模型，用于操作HTML和XML文档中的元素。JavaScript可以操作DOM树，控制网页的元素和属性，实现动态交互效果。</li>
+<li>事件处理：JavaScript可以响应用户的事件，例如鼠标点击，键盘输入等。需要掌握事件类型和事件处理函数的编写方法。</li>
+<li>Ajax和JSON：Ajax可以在不刷新整个网页的情况下向服务器发送请求和接收响应，实现动态交互。JSON是一种轻量级的数据交换格式，常用于数据的传输和通信。</li>
+<li>jQuery库：jQuery是一个流行的JavaScript库，集成了丰富的DOM操作和Ajax请求等功能，可以方便地实现各种交互效果，减少了代码的编写量。</li>
+<li>Node.js：Node.js是基于JavaScript语言开发的后端服务器框架，可以使用JavaScript编写服务器端程序，实现高效的网络应用。</li>
+<li>ES6语法和模块化：ES6是JavaScript的最新标准，引入了很多新的语法和特性，例如let和const关键字、箭头函数、模板字符串、类和继承等。模块化可以让JavaScript代码更加可维护和可扩展，方便了大型项目的开发。</li>
+</ol>
+<p>推荐资源：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript">MDN Web Docs</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.w3schools.com/js/">W3Schools</a></li>
+</ul>
+<h2 id="进阶知识"><a href="#进阶知识" class="headerlink" title="进阶知识"></a>进阶知识</h2><ul>
+<li>深入理解函数及闭包，学习高阶函数、回调函数等概念。</li>
+<li>学习异步编程，包括回调、Promise、async/await等。</li>
+<li>熟悉ES6（ECMAScript 2015）及之后的新特性，例如箭头函数、解构赋值、模块化等。</li>
+<li>学习浏览器中的API，例如Fetch API、Web Storage、Geolocation等。</li>
+</ul>
+<p>推荐资源：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/getify/You-Dont-Know-JS">You Don’t Know JS (book series)</a></li>
+<li><a target="_blank" rel="noopener" href="https://zh.javascript.info/">JavaScript.info</a></li>
+</ul>
+<h2 id="框架和库"><a href="#框架和库" class="headerlink" title="框架和库"></a>框架和库</h2><ul>
+<li>学习常用的JavaScript库，例如jQuery、Lodash等。</li>
+<li>学习至少一个流行的前端框架，例如React、Vue或Angular。</li>
+<li>了解Node.js，学习后端JavaScript编程及相关框架（如Express）。</li>
+</ul>
+<p>推荐资源：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://zh-hans.reactjs.org/">React 官方文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://cn.vuejs.org/">Vue 官方文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://angular.cn/">Angular 官方文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/docs/">Node.js 官方文档</a></li>
+</ul>
+<h2 id="工程实践和工具"><a href="#工程实践和工具" class="headerlink" title="工程实践和工具"></a>工程实践和工具</h2><ul>
+<li>学习使用版本控制系统，如Git。</li>
+<li>了解前端构建工具，如Webpack、Rollup等。</li>
+<li>学习前端测试框架，如Jest、Mocha等。</li>
+<li>掌握代码质量工具，如ESLint、Prettier等。</li>
+</ul>
+<p>推荐资源：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://git-scm.com/book/zh/v2">Pro Git（中文版）</a></li>
+<li><a target="_blank" rel="noopener" href="https://webpack.js.org/concepts/">Webpack 官方文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://jestjs.io/zh-Hans/">Jest 官方文档</a></li>
+</ul>
+<h2 id="持续学习"><a href="#持续学习" class="headerlink" title="持续学习"></a>持续学习</h2><ul>
+<li>阅读技术博客、论坛、专栏，关注JavaScript的新特性和最佳实践。</li>
+<li>参与开源项目，提升自己的编程能力和协作能力。</li>
+<li>学习其他前端技术，如WebGL、WebRTC、WebAssembly等。</li>
+</ul>
+<p>根据上述学习路线，你可以逐步掌握JavaScript编程的各个方面。祝你学习愉快！</p>
+<h2 id="适合初学者的JavaScript练手项目"><a href="#适合初学者的JavaScript练手项目" class="headerlink" title="适合初学者的JavaScript练手项目"></a>适合初学者的JavaScript练手项目</h2><p>对于初学者来说，从简单的项目开始练手是非常有帮助的。以下是一些建议的JavaScript练手项目：</p>
+<ol>
+<li><p><strong>计算器</strong>：实现一个简单的计算器，支持加减乘除等基本运算。可以练习HTML、CSS和JavaScript的基本知识。</p>
+</li>
+<li><p><strong>待办事项应用</strong>：创建一个待办事项列表应用，允许用户添加、删除和修改待办事项。可以学习DOM操作和事件处理。</p>
+</li>
+<li><p><strong>天气应用</strong>：利用公开的天气API，创建一个查询天气的应用。可以学习对接外部API和异步编程。</p>
+</li>
+<li><p><strong>简单的问答小游戏</strong>：设计一个简单的问答小游戏，例如猜数字游戏、成语接龙等。可以练习逻辑处理和事件处理。</p>
+</li>
+<li><p><strong>图片轮播</strong>：实现一个图片轮播组件，可以自动轮播，支持用户手动切换图片。可以学习CSS动画和JavaScript定时器。</p>
+</li>
+<li><p><strong>Markdown预览器</strong>：创建一个Markdown预览器，允许用户输入Markdown文本，并实时预览渲染后的HTML。可以学习使用第三方库。</p>
+</li>
+<li><p><strong>货币转换器</strong>：实现一个货币转换器，允许用户输入金额和选择货币类型，实时计算转换结果。可以学习处理用户输入和调用API。</p>
+</li>
+<li><p><strong>简单的博客系统</strong>：创建一个简单的博客系统，支持展示博客列表、查看博客详情等功能。可以学习前端路由和数据展示。</p>
+</li>
+</ol>
+<p>在完成这些项目时，请尝试使用原生JavaScript，以便更好地理解基本概念。当你对JavaScript有了更深入的了解后，可以使用前端框架（如React、Vue或Angular）尝试更复杂的项目。同时，不要忘了查阅相关文档和学习资源来解决遇到的问题。祝你学习顺利！</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/06/02/ipad%E5%89%AF%E5%B1%8F%E6%89%A9%E5%B1%95/" rel="prev" title="将平板扩展为Windows主机的副屏（以ipad为例，无线链接）">
+                  <i class="fa fa-chevron-left"></i> 将平板扩展为Windows主机的副屏（以ipad为例，无线链接）
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Placebo</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/Placebo27" class="github-corner" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
