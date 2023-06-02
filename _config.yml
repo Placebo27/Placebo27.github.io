@@ -105,3 +105,9 @@ deploy:
   type: git
   repository: https://github.com/Placebo27/Placebo27.github.io
   branch: main
+
+excerpt:			
+  depth: 5			# 他的大小就是全文阅读预览长度设置
+  excerpt_excludes: []
+  more_excludes: []
+  hideWholePostExcerpts: true
