@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/pills_180x180.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/pills_32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/pills_16x16.png">
+  <link rel="mask-icon" href="/images/pills.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Hexo&amp;Github个人博客配置撰写到美化配置博客 hexo cl 是 hexo clean的简写。意思是清除本地的缓存，实际上就是把博客文件夹下的public文件夹删除掉了。这个public是基于本地的文件生成的、用于上传到仓库或者其他网站服务器上的文件夹，可以理解为本地文件上网的中转站、交通工具，删掉了也不影响本地的内容。 hexo g 是hexo generate的简写，意思是生成">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo&amp;Github个人博客配置撰写到美化">
+<meta property="og:url" content="http://example.com/2023/06/02/Hexo&Github%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE%E6%92%B0%E5%86%99%E5%88%B0%E7%BE%8E%E5%8C%96/index.html">
+<meta property="og:site_name" content="Placebo’s Blog">
+<meta property="og:description" content="Hexo&amp;Github个人博客配置撰写到美化配置博客 hexo cl 是 hexo clean的简写。意思是清除本地的缓存，实际上就是把博客文件夹下的public文件夹删除掉了。这个public是基于本地的文件生成的、用于上传到仓库或者其他网站服务器上的文件夹，可以理解为本地文件上网的中转站、交通工具，删掉了也不影响本地的内容。 hexo g 是hexo generate的简写，意思是生成">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/images/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/1680958520314.png">
+<meta property="og:image" content="http://example.com/images/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/1680958715749.png">
+<meta property="og:image" content="http://example.com/images/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/1680963693171.png">
+<meta property="og:image" content="http://example.com/images/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/1680964031232.png">
+<meta property="og:image" content="http://example.com/images/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/1680965510560.png">
+<meta property="og:image" content="http://example.com/images/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/1680964267170.png">
+<meta property="og:image" content="http://example.com/images/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/1680964767983.png">
+<meta property="og:image" content="http://example.com/images/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/1680965881830.png">
+<meta property="og:image" content="http://example.com/images/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/1680964436969.png">
+<meta property="og:image" content="http://example.com/images/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/1680964912309.png">
+<meta property="og:image" content="http://example.com/images/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/1683950862678.png">
+<meta property="og:image" content="http://example.com/images/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/1683951027038.png">
+<meta property="og:image" content="http://example.com/images/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/1683951112541.png">
+<meta property="og:image" content="http://example.com/images/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/1683951226689.png">
+<meta property="og:image" content="http://example.com/images/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/1680965379223.png">
+<meta property="article:published_time" content="2023-06-02T15:29:35.000Z">
+<meta property="article:modified_time" content="2023-06-02T15:32:52.694Z">
+<meta property="article:author" content="Placebo">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Github">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/1680958520314.png">
+
+
+<link rel="canonical" href="http://example.com/2023/06/02/Hexo&Github%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE%E6%92%B0%E5%86%99%E5%88%B0%E7%BE%8E%E5%8C%96/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2023/06/02/Hexo&Github%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE%E6%92%B0%E5%86%99%E5%88%B0%E7%BE%8E%E5%8C%96/","path":"2023/06/02/Hexo&Github个人博客配置撰写到美化/","title":"Hexo&Github个人博客配置撰写到美化"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Hexo&Github个人博客配置撰写到美化 | Placebo’s Blog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Placebo’s Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">HAVE A NICE DAY</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">7</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">5</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">6</span></a></li><li class="menu-item menu-item-link"><a href="/link/" rel="section"><i class="fas fa-link fa-fw"></i>友人帐</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于我</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo-amp-Github%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE%E6%92%B0%E5%86%99%E5%88%B0%E7%BE%8E%E5%8C%96"><span class="nav-number">1.</span> <span class="nav-text">Hexo&amp;Github个人博客配置撰写到美化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2"><span class="nav-number">1.1.</span> <span class="nav-text">配置博客</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%9A%E5%AE%A2%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-number">1.1.1.</span> <span class="nav-text">博客文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%96%87%E4%BB%B6"><span class="nav-number">1.1.2.</span> <span class="nav-text">新建博客文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E5%8D%9A%E5%AE%A2%E4%BF%A1%E6%81%AF"><span class="nav-number">1.1.3.</span> <span class="nav-text">修改博客信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E6%94%B9%E4%B8%BB%E9%A2%98"><span class="nav-number">1.1.4.</span> <span class="nav-text">更改主题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NEXT%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96"><span class="nav-number">1.2.</span> <span class="nav-text">NEXT主题优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E6%94%B9NEXT%E4%B8%BB%E9%A2%98"><span class="nav-number">1.2.1.</span> <span class="nav-text">更改NEXT主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E5%8D%9A%E5%AE%A2icon"><span class="nav-number">1.2.2.</span> <span class="nav-text">设置博客icon</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E5%AF%BC%E8%88%AA%E8%8F%9C%E5%8D%95"><span class="nav-number">1.2.3.</span> <span class="nav-text">设置导航菜单</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%BC%E8%88%AA%E8%8F%9C%E5%8D%95%E5%B1%95%E7%A4%BA"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">导航菜单展示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E8%8F%9C%E5%8D%95%E6%A0%8F%E5%85%B3%E9%94%AE%E9%A1%B5%E9%9D%A2"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">生成菜单栏关键页面</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%A0%87%E7%AD%BE%E9%A1%B5"><span class="nav-number">1.2.3.2.1.</span> <span class="nav-text">标签页</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%88%86%E7%B1%BB%E9%A1%B5"><span class="nav-number">1.2.3.2.2.</span> <span class="nav-text">分类页</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5"><span class="nav-number">1.2.3.2.3.</span> <span class="nav-text">友情链接</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E6%88%91"><span class="nav-number">1.2.3.2.4.</span> <span class="nav-text">关于我</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E9%98%85%E8%AF%BB%E5%8E%9F%E6%96%87%E6%8C%89%E9%92%AE"><span class="nav-number">1.2.4.</span> <span class="nav-text">设置阅读原文按钮</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E5%B7%B2%E8%AF%BB%E8%BF%9B%E5%BA%A6%E6%9D%A1"><span class="nav-number">1.2.5.</span> <span class="nav-text">设置已读进度条</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%B9%E8%A7%92%E7%9A%84-GitHub-banner"><span class="nav-number">1.2.6.</span> <span class="nav-text">边角的 GitHub banner</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E5%A4%B4%E5%83%8F"><span class="nav-number">1.2.7.</span> <span class="nav-text">设置头像</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#github%E5%A4%87%E4%BB%BD%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6"><span class="nav-number">1.3.</span> <span class="nav-text">github备份本地文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E5%8D%9A%E5%AE%A2%E7%AB%99%E7%82%B9%E5%A4%87%E4%BB%BD"><span class="nav-number">1.3.1.</span> <span class="nav-text">本地博客站点备份</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#github%E9%85%8D%E7%BD%AE"><span class="nav-number">1.3.2.</span> <span class="nav-text">github配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%9A%E5%AE%A2%E7%AB%99%E7%82%B9%E5%8F%8A%E5%A4%87%E4%BB%BD%E6%9B%B4%E6%96%B0"><span class="nav-number">1.3.3.</span> <span class="nav-text">博客站点及备份更新</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%9A%E5%AE%A2%E7%AB%99%E7%82%B9%E6%9B%B4%E6%96%B0"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">博客站点更新</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%9A%E5%AE%A2%E5%A4%87%E4%BB%BD%E6%9B%B4%E6%96%B0"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">博客备份更新</span></a></li></ol></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Placebo</p>
+  <div class="site-description" itemprop="description">Placebo的个人博客，记载学习生活记录</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/02/Hexo&Github%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE%E6%92%B0%E5%86%99%E5%88%B0%E7%BE%8E%E5%8C%96/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Placebo">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Placebo’s Blog">
+      <meta itemprop="description" content="Placebo的个人博客，记载学习生活记录">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Hexo&Github个人博客配置撰写到美化 | Placebo’s Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Hexo&Github个人博客配置撰写到美化
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-06-02 23:29:35 / 修改时间：23:32:52" itemprop="dateCreated datePublished" datetime="2023-06-02T23:29:35+08:00">2023-06-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="Hexo-amp-Github个人博客配置撰写到美化"><a href="#Hexo-amp-Github个人博客配置撰写到美化" class="headerlink" title="Hexo&amp;Github个人博客配置撰写到美化"></a>Hexo&amp;Github个人博客配置撰写到美化</h1><h2 id="配置博客"><a href="#配置博客" class="headerlink" title="配置博客"></a>配置博客</h2><ul>
+<li><code>hexo cl</code> 是 <code>hexo clean</code>的简写。意思是清除本地的缓存，实际上就是把博客文件夹下的<code>public</code>文件夹删除掉了。这个<code>public</code>是基于本地的文件生成的、用于上传到仓库或者其他网站服务器上的文件夹，可以理解为本地文件上网的中转站、交通工具，删掉了也不影响本地的内容。</li>
+<li><code>hexo g</code> 是<code>hexo generate</code>的简写，意思是生成public文件夹。</li>
+<li><code>hexo d</code>是<code>hexo deploy</code>的简写，意思是将生成的public文件夹部署到网上，我们这里是部署到github上面。为了顺利部署，我们前面也提到过，要在站点文件夹下<code>_config.yml</code>文件中修改一些内容，如下：</li>
+</ul>
+<h3 id="博客文件夹"><a href="#博客文件夹" class="headerlink" title="博客文件夹"></a>博客文件夹</h3><p>我们打开自己的博客根目录，了解一下里面的这些文件（夹）都是干什么的：</p>
+<p><img src="/images/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/1680958520314.png" alt="1680958520314"></p>
+<ul>
+<li><code>_config.yml</code>：俗称<strong>站点配置文件</strong>，很多与博客网站的格式、内容相关的设置都需要在里面改。</li>
+<li><code>node_modules</code>:存储Hexo插件的文件，可以实现各种扩展功能。一般不需要管。</li>
+<li><code>package.json</code>：别问我，我也不知道干嘛的。</li>
+<li><code>scaffolds</code>：模板文件夹，里面的<code>post.md</code>文件可以设置每一篇博客的模板。具体用起来就知道能干嘛了。</li>
+<li><code>source</code>：非常重要。所有的个人文件都在里面！</li>
+<li><code>themes</code>：主题文件夹，可以从<a target="_blank" rel="noopener" href="https://hexo.io/themes/">Hexo主题官网</a>或者网上大神的Github主页下载各种各样美观的主题，让自己的网站变得逼格高端的关键！</li>
+</ul>
+<p>接下来重点介绍<code>source</code>文件夹。新建的博客中，<code>source</code>文件夹下默认只有一个子文件夹——<code>_posts</code>。我们写的博客都放在这个子文件夹里面。我们还可以在<code>source</code>里面新建各种子文件夹满足自己的个性化需求，对初学者而言，我们先把精力放在主线任务上，然后再来搞这些细节。</p>
+<p><img src="/images/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/1680958715749.png" alt="1680958715749"></p>
+<h3 id="新建博客文件"><a href="#新建博客文件" class="headerlink" title="新建博客文件"></a>新建博客文件</h3><p>博客文件格式为<code>.md</code>（Markdown格式文件，建议使用<a target="_blank" rel="noopener" href="https://www.typora.io/">Typora软件</a>进行编辑）。<strong>注意</strong>：不要新建<code>.md</code>文件，一定要用代码建立新的博客 ：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;新建文件名&quot;</span><br><span class="line">或者hexo n &quot;文件名&quot;</span><br></pre></td></tr></table></figure>
+
+<p>写好内容后，在命令行进行hexo三部曲：</p>
+<blockquote>
+<p>‘hexo cl’命令用于清除缓存文件（db.json）和已生成的静态文件（public）。例如：在更换主题后，如果发现站点更改不生效，可以运行该命令。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo cl</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>然后随便打开一个浏览器，在网址栏输入<code>localhost:4000/</code>，就能发现自己的网站更新了！不过这只是在本地进行了更新，要想部署到网上（Github上），输入如下代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>然后在浏览器地址栏输入<code>https://yourname.github.io</code>，或者<code>yourname.github.io</code>就能在网上浏览自己的博客了！</p>
+<blockquote>
+<p>注意：本地调试其实并不用每次都要hexo三部曲，只需要<code>hexo s</code>，就可以用<code>localhost:4000</code>来查看修改效果，可以节省大量时间 </p>
+</blockquote>
+<p>以上，我们的博客网站1.0版本就搭建完成了，如果没有更多的需求，做到这里基本上就可以了。如果有更多的要求，还需要进一步的精耕细作！</p>
+<h3 id="修改博客信息"><a href="#修改博客信息" class="headerlink" title="修改博客信息"></a>修改博客信息</h3><p>首先打开<code>_config.yml</code><strong>站点配置文件</strong>，找到<strong>Site</strong>注释的地方，这里是博客的基本信息。</p>
+<p><img src="/images/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/1680963693171.png" alt="1680963693171"></p>
+<p>这些都按照个人需要修改，下面是所有配置的释义：</p>
+<p>title: # 标题<br>subtitle: # 副标题<br>description: # 站点描述（可以写简介或格言）<br>keywords: # 搜索关键词<br>author: # 作者<br>language: zh-CN # 语言（这里按你的主题themes中languages文件夹下的文件名填写）<br>timezone: Asia/Shanghai # 时区（中国时区）</p>
+<h3 id="更改主题"><a href="#更改主题" class="headerlink" title="更改主题"></a>更改主题</h3><p>这个388主题，说实话太难看了，因此要去找一个好看的主题，Hexo官方专门提供了一个主题库，可以找到非常多的Hexo主题，并下载更换。</p>
+<p>个人觉得<strong>NexT</strong>主题挺好看的，主要是简约，所以我就拿NexT主题为例更换吧。</p>
+<p>首先，打开<a target="_blank" rel="noopener" href="https://hexo.io/themes/">主题库</a>,搜索NexT， 点击主题的名字，就可以跳转到主题的下载页面 </p>
+<p><img src="/images/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/1680964031232.png" alt="1680964031232"></p>
+<p> 往下滑找到<strong>安装</strong>标签，这包含了主题的下载安装方法。 </p>
+<p><img src="/images/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/1680965510560.png" alt="1680965510560"></p>
+<p> 这里我们选择较快的npm下载。首先，切换到博客的根目录，也就是Blog文件夹中，输入<code>npm install hexo-theme-next</code>就可以安装NexT主题了，npm安装的NexT主题的目录在<strong>node_modules</strong>文件夹下的<strong>hexo-theme-next</strong>文件夹中，里面包含了NexT的配置文件。 </p>
+<p><img src="/images/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/1680964267170.png" alt="1680964267170"></p>
+<p><img src="/images/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/1680964767983.png" alt="1680964767983"></p>
+<p>也可以使用git，通过git命令进行下载（克隆）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/next-theme/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/1680965881830.png" alt="1680965881830"></p>
+<p>如果不会使用git命令，就在github上进行下载</p>
+<p><img src="/images/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/1680964436969.png" alt="1680964436969"></p>
+<p> 把这个文件下载到本地之后，修改配置文件。首先找到自己博客文件夹的地址，将下载的文件夹放到 </p>
+<p><code>.\Blog\themes</code>目录下，然后返回上级目录。</p>
+<p>最后，要记得修改<code>_config.yml</code>配置文件 中的theme主题</p>
+<p><img src="/images/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/1680964912309.png" alt="1680964912309"></p>
+<h2 id="NEXT主题优化"><a href="#NEXT主题优化" class="headerlink" title="NEXT主题优化"></a>NEXT主题优化</h2><p>对于next的主题优化可以说是耗时耗力的，建议以个人需求为主，无需将所有内容添加进个人博客，这部分建议结合个人需求适当挑选其中内容进行配置。</p>
+<h3 id="更改NEXT主题"><a href="#更改NEXT主题" class="headerlink" title="更改NEXT主题"></a>更改NEXT主题</h3><p>next主题有四种：Muse、Mist、Pisces、Gemini，如下图所示</p>
+<p>Muse：<img src="/images/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/1683950862678.png" alt="1683950862678"></p>
+<p>Mist：<img src="/images/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/1683951027038.png" alt="1683951027038"></p>
+<p>Pisces：<img src="/images/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/1683951112541.png" alt="1683951112541"></p>
+<p>Gemini：<img src="/images/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/1683951226689.png" alt="1683951226689"></p>
+<ul>
+<li>Muse - 默认 Scheme，这是 NexT 最初的版本，黑白主调，大量留白</li>
+<li>Mist - Muse 的紧凑版本，整洁有序的单栏外观</li>
+<li>Pisces - 双栏 Scheme，小家碧玉似的清新</li>
+<li>Gemini - 左侧网站信息及目录，块+片段结构布局</li>
+</ul>
+<p>打开博客目录Blog/themes/next/下的_config.yml（<strong>主题配置文件</strong>），只要将你所选主题前的注释<code>#</code>剪切到当前主题就行了：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Schemes</span><br><span class="line">scheme: Muse	    #这是默认主题</span><br><span class="line">#scheme: Mist</span><br><span class="line">#scheme: Pisces</span><br><span class="line">#scheme: Gemini</span><br></pre></td></tr></table></figure>
+
+<p>接下来同更新博客操作，打开git bash在命令行一键三连：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo cl &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
+
+<p>然后打开浏览器，在网址栏输入<code>localhost:4000/</code>，就能发现自己的网站更新了！<img src="/images/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/1680965379223.png" alt="1680965379223"></p>
+<p>若要部署到Github上：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<h3 id="设置博客icon"><a href="#设置博客icon" class="headerlink" title="设置博客icon"></a>设置博客icon</h3><p>图标素材：<a target="_blank" rel="noopener" href="https://www.iconfont.cn/">iconfont-阿里巴巴矢量图标库</a> </p>
+<p>选择合适的icon，分别下载16，32，180大小png格式及400大小svg格式的图标，放置在 <code>/themes/next/source/imges/</code> 文件夹中。</p>
+<p>修改<strong>主题配置文件</strong>中 <code>favicon</code> 中的内容，依次替换<code>small</code>，<code>medium</code>，<code>apple_touch_icon</code>，<code>safari_pinned_tab</code>字段的图片名；如果是直接替换原来的图标文件则不需要修改。</p>
+<h3 id="设置导航菜单"><a href="#设置导航菜单" class="headerlink" title="设置导航菜单"></a>设置导航菜单</h3><h4 id="导航菜单展示"><a href="#导航菜单展示" class="headerlink" title="导航菜单展示"></a>导航菜单展示</h4><p>第一种方法比较麻烦，打开<strong>主题配置文件</strong>，修改 <code>menu</code> 中的内容，编辑想要展示的内容，可参考下方示例：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span>                      <span class="comment">#首页</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span>                 <span class="comment">#标签</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span>       <span class="comment">#分类</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span>      <span class="comment">#归档</span></span><br><span class="line">  <span class="comment">#schedule: /schedule/ || fa fa-calendar    #日历</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || fa fa-sitemap    #站点地图，供搜索引擎爬取</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || fa fa-heartbeat      #腾讯公益404</span></span><br><span class="line">  <span class="comment"># List||fas fa-list:</span></span><br><span class="line">  <span class="comment">#   Music: /music/ || fas fa-music</span></span><br><span class="line">  <span class="comment">#   Movie: /movies/ || fas fa-video</span></span><br><span class="line">  <span class="attr">link:</span> <span class="string">/link/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-link</span>                <span class="comment">#友情链接</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span>			    <span class="comment">#关于</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Enable / Disable menu icons / item badges.    </span></span><br><span class="line"><span class="attr">menu_settings:</span></span><br><span class="line">  <span class="attr">icons:</span> <span class="literal">true</span>       <span class="comment"># 是否显示各个页面的图标</span></span><br><span class="line">  <span class="attr">badges:</span> <span class="literal">true</span>      <span class="comment"># 是否显示分类/标签/归档页的内容量</span></span><br></pre></td></tr></table></figure>
+
+<p>“||”前面的是目标链接，后面的是图标名称，next使用的图标全是<a href="https://link.zhihu.com/?target=http://www.fontawesome.com.cn/faicons/%23web-application">图标库 - Font Awesome 中文网</a>这一网站的，有想用的图标直接在该网站上面找图标的名称就行。</p>
+<p>新添加的菜单需要翻译对应的中文，打开<code>theme/next/languages/zh-CN.yml</code>，在<code>menu</code>下设置：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">首页</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">归档</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">分类</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">标签</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">关于我</span></span><br><span class="line">  <span class="attr">search:</span> <span class="string">搜索</span></span><br><span class="line">  <span class="attr">schedule:</span> <span class="string">日程表</span></span><br><span class="line">  <span class="attr">sitemap:</span> <span class="string">站点地图</span></span><br><span class="line">  <span class="attr">commonweal:</span> <span class="string">公益</span> <span class="number">404</span></span><br><span class="line">  <span class="attr">link:</span> <span class="string">友人帐</span></span><br></pre></td></tr></table></figure>
+
+<p>第二种方法可以直接在第一步中的<strong>主题配置文件</strong>一步到位（但是以后更改language时菜单内容依然会是如下中文）：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="string">首页:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="string">标签:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="string">分类:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span></span><br><span class="line">  <span class="string">归档:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span></span><br><span class="line">  <span class="comment">#schedule: /schedule/ || fa fa-calendar</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || fa fa-sitemap</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || fa fa-heartbeat</span></span><br><span class="line">  <span class="comment"># List||fas fa-list:</span></span><br><span class="line">  <span class="comment">#   Music: /music/ || fas fa-music</span></span><br><span class="line">  <span class="comment">#   Movie: /movies/ || fas fa-video</span></span><br><span class="line">  <span class="string">友人帐:</span> <span class="string">/link/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-link</span></span><br><span class="line">  <span class="string">关于我:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span></span><br><span class="line">  </span><br><span class="line"><span class="comment"># Enable / Disable menu icons / item badges.    </span></span><br><span class="line"><span class="attr">menu_settings:</span></span><br><span class="line">  <span class="attr">icons:</span> <span class="literal">true</span>       <span class="comment"># 是否显示各个页面的图标</span></span><br><span class="line">  <span class="attr">badges:</span> <span class="literal">true</span>      <span class="comment"># 是否显示分类/标签/归档页的内容量</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="生成菜单栏关键页面"><a href="#生成菜单栏关键页面" class="headerlink" title="生成菜单栏关键页面"></a>生成菜单栏关键页面</h4><p>进入 Hexo 博客的根目录，右键<code>Bash</code>：</p>
+<h5 id="标签页"><a href="#标签页" class="headerlink" title="标签页"></a>标签页</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
+
+<p>打开 <code>source/tags/index.md</code> 文件，修改如下：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 标签</span><br><span class="line">date: 2023-05-13 21:03:07</span><br><span class="line"><span class="section">type: &quot;tags&quot;</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>给文章添加”tags”属性</strong></p>
+<p>打开需要添加标签的文章，为其添加<code>tags</code>属性。下方的<code>tags: - Hexo - Github</code><br>就是这篇文章的多个标签。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hexo&amp;Github搭建个人博客</span><br><span class="line">date: 2023-05-12 20:46:38</span><br><span class="line">tags: </span><br><span class="line">- Hexo</span><br><span class="line">- Github</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>至此，成功给文章添加标签，点击首页的“标签”可以看到该标签下的所有文章。当然，只有添加了<code>tags: xxx</code>的文章才会被收录到首页的“标签”中。</p>
+<h5 id="分类页"><a href="#分类页" class="headerlink" title="分类页"></a>分类页</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
+
+<p>打开 <code>source/categories/index.md 文件</code>，修改如下： </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 分类</span><br><span class="line">date: 2023-05-13 21:03:22</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p><strong>给文章添加分类”categories”属性</strong></p>
+<p>打开需要添加分类的文章，为其添加<code>categories</code>属性。下方的<code>categories: - Blog</code>表示添加这篇文章到“Blog”这个分类。注意：hexo一篇文章只能属于一个分类，也就是说如果在“- Blog”下方添加了“- xxx”，hexo不会产生两个分类，而是把分类嵌套（即该文章属于 “- Blog”下的 “- xxx”分类）。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hexo&amp;Github搭建个人博客</span><br><span class="line">date: 2023-05-12 20:46:38</span><br><span class="line">tags: </span><br><span class="line">- Hexo</span><br><span class="line">- Github</span><br><span class="line">categories: </span><br><span class="line">- Blog</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>至此，成功给文章添加分类，点击首页的“分类”可以看到该分类下的所有文章。当然，只有添加了<code>categories: xxx</code>的文章才会被收录到首页的“分类”中。</p>
+<p>打开博客目录下的<code>scaffolds/post.md</code>文件，在<code>tages:</code>下面加入<code>categories:</code>，保存，以后执行<code>hexo new &quot;文章名&quot;</code>命令生成的文件页面里就有<code>categories:</code>项了。</p>
+<p>scaffolds目录下，是新建页面的模板，执行新建命令时，是根据这里的模板页来完成的，所以可以在这里根据你自己的需求添加一些默认值。</p>
+<h5 id="友情链接"><a href="#友情链接" class="headerlink" title="友情链接"></a>友情链接</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page link</span><br></pre></td></tr></table></figure>
+
+<p>打开 <code>source/link/index.md</code> 文件，修改如下： </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 友情链接</span><br><span class="line">date: 2023-05-13 21:03:32</span><br><span class="line">type: &quot;link&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p><strong>添加友情链接</strong></p>
+<p>在上述<code>index.md</code>文件内容下方，根据个人喜好填写其中内容：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment"># 友人帐</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> <span class="comment">## [Plucky](https://plucky923.github.io/)</span></span><br><span class="line"></span><br><span class="line"><span class="type">![Plucky](images/index/R</span><span class="string">-C.jpg)</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> <span class="comment">### 简介：饥饿艺术家</span></span><br><span class="line"></span><br><span class="line"><span class="string">-----------------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> <span class="comment">## [Solar1s](https://solar1s.t0nkov.site/)</span></span><br><span class="line"></span><br><span class="line"><span class="type">![Solar1s](images/index/android</span><span class="string">-chrome-384x384.png)</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> <span class="comment">### 简介：A postgraduate student of School of Cyber Science and Engineering, SouthEast University in Nanjing.</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page about</span><br></pre></td></tr></table></figure>
+
+<p>打开 <code>source/about-me/index.md</code> 文件，修改如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 关于我</span><br><span class="line">date: 2023-05-13 21:03:41</span><br><span class="line">type: &quot;about&quot;</span><br><span class="line">---</span><br><span class="line"># 下方填写一些个人公开信息</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p> 注意：如果有启用评论，默认页面带有评论。需要关闭的话，添加字段<code>comments</code>并将值设置为false。 </p>
+</blockquote>
+<h3 id="设置阅读原文按钮"><a href="#设置阅读原文按钮" class="headerlink" title="设置阅读原文按钮"></a>设置阅读原文按钮</h3><p>NexT主题下的首页默认是显示每一篇文章的全文的，如果文章很长就要往下拉很远才能看到下一篇文章，而我们要设置成每一篇文章只预览前5行，然后底部显示一个阅读原文的按钮，点击可以进入阅读全文。</p>
+<p>首先安装插件，打开站点根目录，右键Bash：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-excerpt --save</span><br></pre></td></tr></table></figure>
+
+<p>打开<strong>站点配置文件</strong><code>_config.yml</code>添加：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">excerpt:			# 一定要顶格写，注意格式</span><br><span class="line">  depth: 5			# 他的大小就是全文阅读预览长度设置</span><br><span class="line">  excerpt_excludes: []</span><br><span class="line">  more_excludes: []</span><br><span class="line">  hideWholePostExcerpts: true</span><br></pre></td></tr></table></figure>
+
+<p>打开NexT主题的<strong>主题配置文件</strong>，即站点根目录<code>\themes\next\_config.yml</code>，搜索<code>excerpt_description</code>，然后改为true：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Use `description` in front-matter to specify post excerpt.</span><br><span class="line">excerpt_description: true</span><br></pre></td></tr></table></figure>
+
+<h3 id="设置已读进度条"><a href="#设置已读进度条" class="headerlink" title="设置已读进度条"></a>设置已读进度条</h3><p>修改<strong>主题配置文件</strong>，将<code>reading_progress</code> 的<code>enable</code>设置为<code>true</code>即可，位置颜色和高度都可以自行调整。</p>
+<h3 id="边角的-GitHub-banner"><a href="#边角的-GitHub-banner" class="headerlink" title="边角的 GitHub banner"></a>边角的 GitHub banner</h3><p>在<strong>主题配置文件</strong>中修改 <code>github_banner</code> 字段：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">github_banner:</span><br><span class="line">  enable: true</span><br><span class="line">  permalink: https://github.com/你的用户名</span><br></pre></td></tr></table></figure>
+
+<h3 id="设置头像"><a href="#设置头像" class="headerlink" title="设置头像"></a>设置头像</h3><p>编辑<strong>主题配置文件</strong>，修改字段<code>avatar</code>，头像图片放在 <code>/themes/source/images/</code> 中，其中可以设置头像的地址 ，头像的形状，以及旋转动画：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">avatar:</span><br><span class="line">  url: #/images/avatar.jpeg   #图片的位置，也可以是http://xxx.com/avatar.png</span><br><span class="line">  rounded: true               #头像框为圆形</span><br><span class="line">  rotated: true				 #头像随光标旋转</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="github备份本地文件"><a href="#github备份本地文件" class="headerlink" title="github备份本地文件"></a>github备份本地文件</h2><h3 id="本地博客站点备份"><a href="#本地博客站点备份" class="headerlink" title="本地博客站点备份"></a>本地博客站点备份</h3><p>因为站点实际上是部署在本地的，现在在 GitHub 上只有一些静态文件，一旦本地文件丢失或者损坏，就要重新搭建网站，甚至文章也会丢失，为了在这种情况发生的情况下能够快速恢复本地站点，可以在 GitHub 上新建分支，用于备份本地站点文件。</p>
+<blockquote>
+<p><strong>注：</strong>该部分根据个人需要自行选择。除用作备份，还可解决多个PC设备间站点同步问题，如实现办公和个人电脑间站点的同步。</p>
+</blockquote>
+<p>之前我们的本地站点文件夹为 <code>Blog</code> ，在其他合适的位置新建文件夹 <code>Hexo</code>，将GitHub远程仓库复制到本地，右键启用<code>Git Bash Here</code>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> 你的仓库地址 Hexo </span><br></pre></td></tr></table></figure>
+
+<p>删除除了版本控制 <code>.git</code> 之外的所有文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> Hexo &amp;&amp; <span class="built_in">rm</span> -r *</span><br></pre></td></tr></table></figure>
+
+<p>将 <code>Blog</code> 文件夹下的所有文件复制到 <code>Hexo</code> 文件夹</p>
+<p>如果使用的主题是从Github克隆的，那么手动或者使用命令删除它的Git文件（以next主题为例），否则无法将主题文件<code>push</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rm</span> -r themes/next/.git</span><br></pre></td></tr></table></figure>
+
+<h3 id="github配置"><a href="#github配置" class="headerlink" title="github配置"></a>github配置</h3><p>创建新分支 <code>hexo</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b hexo</span><br></pre></td></tr></table></figure>
+
+<p>推送到<code>hexo</code>分支</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add . <span class="comment"># 保存到暂存区</span></span><br><span class="line">git commit -m <span class="string">&quot;Hexo branch&quot;</span> <span class="comment"># 提交信息为hexo分支</span></span><br><span class="line">git push --set-upstream origin hexo <span class="comment"># 设置为上游分支</span></span><br></pre></td></tr></table></figure>
+
+<p>那么到此原来的 <code>Blog</code> 文件夹就可以删除了，当然也可以作为本地备份。</p>
+<h3 id="博客站点及备份更新"><a href="#博客站点及备份更新" class="headerlink" title="博客站点及备份更新"></a>博客站点及备份更新</h3><h4 id="博客站点更新"><a href="#博客站点更新" class="headerlink" title="博客站点更新"></a>博客站点更新</h4><p>更新到 <code>master/main</code> 分支</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d <span class="comment"># 生成并部署失败则反复hexo d即可</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="博客备份更新"><a href="#博客备份更新" class="headerlink" title="博客备份更新"></a>博客备份更新</h4><p>备份到 <code>hexo</code> 分支，更新远程仓库的本地备份</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add . </span><br><span class="line">git commit -m <span class="string">&quot;提交信息&quot;</span> </span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+              <a href="/tags/Github/" rel="tag"># Github</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/05/12/hello-world/" rel="prev" title="Hello World">
+                  <i class="fa fa-chevron-left"></i> Hello World
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/06/02/ipad%E5%89%AF%E5%B1%8F%E6%89%A9%E5%B1%95/" rel="next" title="将平板扩展为Windows主机的副屏（以ipad为例，无线链接）">
+                  将平板扩展为Windows主机的副屏（以ipad为例，无线链接） <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Placebo</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/Placebo27" class="github-corner" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

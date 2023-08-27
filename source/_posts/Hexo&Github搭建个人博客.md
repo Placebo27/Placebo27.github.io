@@ -6,6 +6,7 @@ tags:
 - Github
 categories: 
 - Blog
+typora-root-url: ../
 ---
 
 # Hexo&Github搭建个人博客
@@ -34,7 +35,7 @@ npm install hexo-cli -g
 hexo init
 ```
 
-如下图所示即为成功：![1680873666633](C:\Users\PLacebo\AppData\Roaming\Typora\typora-user-images\1680873666633.png)
+如下图所示即为成功：![1680873666633](/images/Hexo&Github搭建个人博客/1680873666633.png)
 
 ### 生成本地Hexo页面
 
@@ -45,7 +46,7 @@ hexo server
 或者hexo s
 ```
 
-如下图所示即为成功：![1680873683510](C:\Users\PLacebo\AppData\Roaming\Typora\typora-user-images\1680873683510.png)
+如下图所示即为成功：![1680873683510](/images/Hexo&Github搭建个人博客/1680873683510.png)
 
 然后在浏览器中打开`http://localhost:4000/`，就能看到本地博客；按下`Ctrl+C`则关闭本地服务器。
 
@@ -59,9 +60,9 @@ hexo server
 
 ### 新建仓库
 
-在github个人首页，点击`Create repository`，如下图所示：![1680873809468](C:\Users\PLacebo\AppData\Roaming\Typora\typora-user-images\1680873809468.png)
+在github个人首页，点击`Create repository`，如下图所示：![1680873809468](/images/Hexo&Github搭建个人博客/1680873809468.png)
 
-命名为`username.github.io`（username 是你的用户名)，如下图：![1680873944366](C:\Users\PLacebo\AppData\Roaming\Typora\typora-user-images\1680873944366.png)
+命名为`username.github.io`（username 是你的用户名)，如下图：![1680873944366](/images/Hexo&Github搭建个人博客/1680873944366.png)
 
 如果创建成功后页面为404，则尝试挂一下加速器，改host可能会有此问题，或者裸连。
 
@@ -96,13 +97,15 @@ clip < C:/Users/用户名/.ssh/id_rsa.pub
 
 #### Github添加SSH key
 
-打开 github 点击头像 -> Settings -> SSH and GPG keys -> New SSH key 新建 SSH key：![1680956656990](C:\Users\PLacebo\AppData\Roaming\Typora\typora-user-images\1680956656990.png)
+打开 github 点击头像 -> Settings -> SSH and GPG keys -> New SSH key 新建 SSH key：
 
-![1680956631099](C:\Users\PLacebo\AppData\Roaming\Typora\typora-user-images\1680956631099.png)
+![1680956656990](/images/Hexo&Github搭建个人博客/1680956656990.png)
 
-![1680956679681](C:\Users\PLacebo\AppData\Roaming\Typora\typora-user-images\1680956679681.png)
+![1680956631099](/images/Hexo&Github搭建个人博客/1680956631099.png)
 
-Title可以随便起，将上述SSH公钥粘贴到Key文本框中：![1680957120218](C:\Users\PLacebo\AppData\Roaming\Typora\typora-user-images\1680957120218.png)
+![1680956679681](/images/Hexo&Github搭建个人博客/1680956679681.png)
+
+Title可以随便起，将上述SSH公钥粘贴到Key文本框中：![1680957120218](/images/Hexo&Github搭建个人博客/1680957120218.png)
 
 #### 测试SSH key是否配置成功
 
@@ -129,7 +132,7 @@ deploy:
 npm install hexo-deployer-git --save
 ```
 
-![1680875583179](C:\Users\PLacebo\AppData\Roaming\Typora\typora-user-images\1680875583179.png)
+![1680875583179](/images/Hexo&Github搭建个人博客/1680875583179.png)
 
 ### 生成public上传文件夹
 
@@ -147,7 +150,7 @@ hexo generate
 或者hexo g
 ```
 
-![1680876225334](C:\Users\PLacebo\AppData\Roaming\Typora\typora-user-images\1680876225334.png)
+![1680876225334](/images/Hexo&Github搭建个人博客/1680876225334.png)
 
 ### 部署到github
 
@@ -158,13 +161,13 @@ hexo deploy
 或者hexo d
 ```
 
-如果发生如下报错：![1680876607176](C:\Users\PLacebo\AppData\Roaming\Typora\typora-user-images\1680876607176.png)
+如果发生如下报错：![1680876607176](/images/Hexo&Github搭建个人博客/1680876607176.png)
 
 出现该问题不要惊慌，这个错误其实很简单，是因为同步文件缺失导致的，很明显我们push的hexo静态文件会缺失README.md这个文件，所以我们只需要把远端的README.md文件同步下来或者新建一个readme.md文档即可。
 
 这里我选择新建README.md文档。（此操作后来发现，没什么用，但是也记录下来）
 
-![1680877252167](C:\Users\PLacebo\AppData\Roaming\Typora\typora-user-images\1680877252167.png)
+![1680877252167](/images/Hexo&Github搭建个人博客/1680877252167.png)
 
 **实际解决方法：**
 
@@ -180,19 +183,19 @@ hexo deploy
 	name=GitHub用户名
 ```
 
-若又出现以下错误，无法访问错误， 不要惊慌，多次尝试，或者更换网络再次尝试（加速器）：![1680877644122](C:\Users\PLacebo\AppData\Roaming\Typora\typora-user-images\1680877644122.png)
+若又出现以下错误，无法访问错误， 不要惊慌，多次尝试，或者更换网络再次尝试（加速器）：![1680877644122](/images/Hexo&Github搭建个人博客/1680877644122.png)
 
 然后会弹出一个小窗口，登陆你的github账户进行连接，链接成功你会收到一封邮件。
 
-![1680877867261](C:\Users\PLacebo\AppData\Roaming\Typora\typora-user-images\1680877867261.png)
+![1680877867261](/images/Hexo&Github搭建个人博客/1680877867261.png)
 
 这样就成功了，打开你的github个人仓库会看到你推送的文件。
 
-![1680878108104](C:\Users\PLacebo\AppData\Roaming\Typora\typora-user-images\1680878108104.png)
+![1680878108104](/images/Hexo&Github搭建个人博客/1680878108104.png)
 
 然后通过你的仓库后面的链接`https://username.github.io`访问你的个人博客。
 
-![1680878256004](C:\Users\PLacebo\AppData\Roaming\Typora\typora-user-images\1680878256004.png)
+![1680878256004](/images/Hexo&Github搭建个人博客/1680878256004.png)
 
-![1680878360529](C:\Users\PLacebo\AppData\Roaming\Typora\typora-user-images\1680878360529.png)
+![1680878360529](/images/Hexo&Github搭建个人博客/1680878360529.png)
 
